@@ -5,6 +5,7 @@ import LogPage from "./pages/logPage";
 import ContactPage from "./pages/contactPage";
 import HeaderBar from "./components/header";
 import CallPage from "./pages/callPage";
+import Addcontact from "./pages/addcontact";
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
             <Route path="/log" element={<LogPage/>}/>
             <Route path="/contact" element={<ContactPage/>}/>
             <Route path="/call" element={<CallPage />}/>
+            <Route path="/addcontact" element={<Addcontact/>}/>
+
 
 
       </Routes>

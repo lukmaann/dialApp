@@ -27,6 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* flex-direction: column; */
   background-color: black;
   width: 100%;
   padding: 2px 35px 2px 35px;
@@ -38,10 +39,12 @@
 .menuItems {
   height: 100%;
   text-align: center;
-  padding-top: 8px;
-  font-size: 13px;
-}
 
+  font-size: 10px;
+}
+.menuItems button{
+ background-color: black;
+}
 .headerBar {
   position: absolute;
   height: 60px;
@@ -109,17 +112,22 @@
   display: grid;
   grid-template-columns: auto auto auto;
   height: 95%;
+  font-weight: bolder;
 }
 
 .dialScreen {
   width: 100%;
   height: 50px;
-  background-color: rgb(159, 159, 23);
   position: absolute;
   bottom: 0;
+  right: 0;
   justify-content: end;
   display: flex;
   align-items: center;
+}
+.dialScreen button{
+  height: 100%;
+  border-bottom: 2px solid;
 }
 .dialScreen input {
   width: 100%;
@@ -131,4 +139,37 @@
   font-size: larger;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+
+.logs{
+  width: 100%;
+  height: 50px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+  border-bottom: 1px solid snow;
+  padding: 15px;
+}
+
+.contactForm{
+  height: 100%;
+  width: 100%;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+}
+
+.contactForm form{
+  width: 100%;
+  height: 50%;
+  /* background-color: black; */
+  padding: 30px;
+}
+
+.contactForm input{
+  height: 30px;
 }

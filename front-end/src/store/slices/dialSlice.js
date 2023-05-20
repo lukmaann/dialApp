@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
 
 const Dial=createSlice({
@@ -10,10 +11,14 @@ const Dial=createSlice({
         },
         removeNumber:(state)=>{
             return((state.substring(0,state.length-1)))
-        }
+        },
+       eraseAll:(state)=>{
+        return " "
+        
+       }
     }
 })
 
-export default Dial
+export default Dial.reducer;
 
-export const {addNumber,removeNumber}=Dial.actions
+export const {addNumber,eraseAll,removeNumber}=Dial.actions

@@ -2,10 +2,11 @@ import { useDispatch } from "react-redux";
 import { addNumber, removeNumber } from "../../store/slices/dialSlice";
 import BackspaceIcon from '@mui/icons-material/Backspace';
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const DialPad = () => {
+  const navigate=useNavigate();
 const dispatch=useDispatch();
 function addNum(e){
   const {value}=e.target
@@ -14,6 +15,11 @@ function addNum(e){
 }
 function removenum(){
   dispatch(removeNumber())
+}
+function erasenum(){
+  navigate('/call')
+
+ 
 }
 
   return (
@@ -30,9 +36,8 @@ function removenum(){
       <button className="btn btn-dark rounded-0" onClick={removenum}  ><BackspaceIcon/></button>
       <button className="btn btn-dark rounded-0" onClick={addNum} value={0} >0</button>
       
-      <Link to="/call"  className="text-light d-flex text-align-center  text-decoration-none">
-      <button className=" btn-dark btn rounded-0 " >Call</button>
-      </Link>
+      <button className=" btn-dark btn rounded-0 " onClick={erasenum} >Call</button>
+      
     </div>
   );
 };

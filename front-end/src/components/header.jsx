@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 
 
 const HeaderBar = () => {
   return (
     <div className="headerBar">
-    <h2>Dial</h2>
+    <h2>Phone</h2>
      
     </div>
   );
