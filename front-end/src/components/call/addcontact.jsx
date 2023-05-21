@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addNumber } from "../../store/slices/dialSlice";
+import { useSelector } from "react-redux";
 
 const Add = () => {
-  const dispatch = useDispatch();
+
 
   const number = useSelector((state) => state.dial);
   const [contact, setcontact] = useState({ name: "", number: "" });
