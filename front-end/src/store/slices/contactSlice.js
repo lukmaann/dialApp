@@ -5,7 +5,7 @@ const contactSlice=createSlice({
     initialState:[],
     reducers:{
         addContact:(state,action)=>{
-            state.push(action.payload)
+            return state=action.payload
         },
         delContact:(state,action)=>{
             state.splice(action.payload,1)

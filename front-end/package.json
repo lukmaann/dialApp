@@ -1,7 +1,6 @@
 {
   "name": "front-end",
   "private": true,
- 
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -17,6 +16,7 @@
     "@mui/material": "^5.13.1",
     "@mui/styled-engine-sc": "^5.12.0",
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "jquery": "^3.7.0",
     "popper.js": "^1.16.1",

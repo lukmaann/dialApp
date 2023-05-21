@@ -33,6 +33,7 @@ const CallingButtons = () => {
 
     </div>
   <button className='btn btn-danger m-2' onClick={()=>handleEnd(numb)}>End</button>
+
     </div>
   )
 }

@@ -15,10 +15,13 @@ const Dial=createSlice({
        eraseAll:(state)=>{
         return " "
         
+       },
+       addContactNumber:(state,action)=>{
+        return state=action.payload
        }
     }
 })
 
 export default Dial.reducer;
 
-export const {addNumber,eraseAll,removeNumber}=Dial.actions
+export const {addNumber,eraseAll,removeNumber,addContactNumber}=Dial.actions

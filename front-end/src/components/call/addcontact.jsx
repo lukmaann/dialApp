@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+import axios from "axios";
 
 const Add = () => {
-
+  const navigate = useNavigate();
 
   const number = useSelector((state) => state.dial);
   const [contact, setcontact] = useState({ name: "", number: "" });
@@ -12,17 +15,21 @@ const Add = () => {
 
   const handleInput = (e) => {
     const { name, value } = e.target;
-    
+
     setcontact({ ...contact, [name]: value });
   };
 
-  const handleSubmit=(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const {name,number}=contact;
-    console.log(name,number);
-  }
+    const { name, number } = contact;
+    await axios.post("http://localhost:3000/add", {
+      name: name,
+      number: number,
+    });
 
-
+    // console.log(result);
+    navigate("/");
+  };
 
   return (
     <div className="contactForm">
@@ -54,7 +61,11 @@ const Add = () => {
           />
         </div>
 
-        <button type="submit" onClick={handleSubmit} className="btn btn-primary">
+        <button
+          type="submit"
+          onClick={handleSubmit}
+          className="btn btn-primary"
+        >
           Add
         </button>
       </form>
